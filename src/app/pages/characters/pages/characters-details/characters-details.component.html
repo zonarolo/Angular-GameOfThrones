@@ -1,11 +1,51 @@
-<p>characters-details!</p>
+<header class="header">
+    <div class="header__link">
+        <a href="">Atras</a>
+    </div>
+    <div class="header__flags">
+        <img src="../../../../../assets/img/white-home.png" [routerLink]="['/home']">
+        <img src="../../../../../assets/img/spain.png" >
+        <img src="../../../../../assets/img/united-kingdom.png"/>
+    </div>
+</header>
+<div class="character">
+<img class="character__img" src="{{character.image}}" alt="">
+<h1>{{character.name}}</h1>
+</div>
+<div class="characterDetails">
 
-<h1>ERROR del ngFor</h1>
+<table class="characterDetails--table">
+<tr class="characterDetails--table__header">
+    <th>Casa</th>
+    <th>Alianzas</th>
+    <th>Apariciones</th>
+    <th>Padre</th>
+    <th>Descendientes</th>
+    <th>Titulo</th>
+</tr>
+<tr class="characterDetails--table__ll">
+    <td>{{character.house}}</td>
+    <td class="characterDetails--table__items">
+        <ul *ngFor="let allegiance of character.allegiances">
+            <li>{{allegiance}}</li>
+        </ul>
+    </td>
+<td class="characterDetails--table__items">
+    <ul *ngFor="let appearances of character.appearances">
+        <li>{{appearances}}</li>
+    </ul>
+</td>
+    <td>{{character.father}}</td>
+    <td class="characterDetails--table__items">
+        <ul *ngFor="let sibling of character.siblings">
+            <li>{{sibling}}</li>
+        </ul>
+    </td>
+    <td class="characterDetails--table__items">
+        <ul *ngFor="let title of character.titles">
+            <li>{{title}}</li>
+        </ul>
+    </td>
 
-<app-characters-list [characters]="character" ></app-characters-list>
-
-{{ character.name}}
-<img src="{{character.image}}" alt="">
-{{character.house}}
-
-
+</tr>
+</table>
