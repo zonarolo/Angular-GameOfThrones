@@ -35,8 +35,12 @@ body{
 
 }
 .ui-orderlist-list{
+<<<<<<< HEAD
+    // border: solid 5px red;
+=======
     overflow-y: scroll;
     height: 82vh;
+>>>>>>> c8af2c920a69551d288aa2c32d7a3b53d0da40c8
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -49,4 +53,9 @@ body{
 .ui-orderlist-item	{
     margin: 2vh 0;
     text-align: center;
+<<<<<<< HEAD
+    // border: solid 5px blue;
+    width: 23vw;
+=======
+>>>>>>> c8af2c920a69551d288aa2c32d7a3b53d0da40c8
 }
