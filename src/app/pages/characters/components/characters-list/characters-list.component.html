@@ -1,7 +1,10 @@
 <div class="c-character-list">
     <p-orderList [value]="characters" filter="filter" filterBy="name, house"  filterPlaceholder="Search" >
-        <ng-template let-char pTemplate="item">
-            <div class="item c-character-list__container" [routerLink]="['/characters/', char.name]">
+
+        
+
+        <ng-template let-char pTemplate="item" data-simplebar>
+            <div class="item c-character-list__container" [routerLink]="['/characters/', char.name]" data-simplebar="c-character-list">
                 <img class="c-character-list__img" src="{{ char.image }}" >
                 <div class="c-character-list__text">
                 <h1>{{char.name}}</h1>
@@ -9,6 +12,8 @@
                 </div>
             </div>
         </ng-template>
+            
+    
     </p-orderList>
     <div class="c-character-list__links">
         <p class="pj" [routerLink]="['/characters']" translate>One</p>

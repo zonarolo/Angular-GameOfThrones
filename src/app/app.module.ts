@@ -14,6 +14,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { HousesListComponent } from './pages/houses/components/houses-list/houses-list.component';
 import { HousesComponent } from './pages/houses/pages/houses/houses/houses.component';
 import { HousesDetailsComponent } from './pages/houses/pages/houses-details/houses-details/houses-details.component';
+import { SimplebarAngularModule } from 'simplebar-angular';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -35,6 +36,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AppRoutingModule,
     HttpClientModule,
     OrderListModule,
+    SimplebarAngularModule,
     TranslateModule.forRoot({
       defaultLanguage: 'es',
       loader: {
