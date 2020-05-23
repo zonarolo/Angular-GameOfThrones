@@ -19,7 +19,7 @@ body{
     display: none;
 }
 .ui-inputtext{
-    margin: 10px 20px;
+    margin: 25px 20px;
     font-size: 16px;
     border: none;
     width: 30vw;
@@ -35,7 +35,6 @@ body{
 
 }
 .ui-orderlist-list{
-    border: solid 5px red;
     overflow-y: scroll;
     height: 82vh;
     display: flex;
@@ -46,10 +45,8 @@ body{
 }
 .ui-orderlist-list::-webkit-scrollbar{
     width: 20px;
-    background-color: chartreuse;
 }
 .ui-orderlist-item	{
     margin: 2vh 0;
     text-align: center;
-    border: solid 5px blue;
 }
