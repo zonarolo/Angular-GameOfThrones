@@ -4,8 +4,8 @@
     </div>
 </header>
 <div class="character">
-<img class="character__img" src="{{character.image}}" alt="">
-<h1>{{character.name}}</h1>
+<img class="character__img" src="{{character.image}}" />
+<h1 class="character__name">{{character.name}}</h1>
 </div>
 <div class="characterDetails">
 
@@ -26,9 +26,11 @@
         </ul>
     </td>
 <td class="characterDetails--table__items">
-        <ul *ngFor="let appearances of character.appearances" class="ul-apariciones">
-            <li>{{appearances}}</li>
-        </ul>
+        <div class="ul-apariciones">
+            <ul *ngFor="let appearances of character.appearances">
+                <li>{{appearances}}</li>
+            </ul>
+        </div>
 </td>
     <td>{{character.father}}</td>
     <td class="characterDetails--table__items">

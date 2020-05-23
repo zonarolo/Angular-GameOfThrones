@@ -21,7 +21,6 @@
     }
 }
 .character{
-    // border: solid 5px yellow;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,8 +29,12 @@
     padding: 10px;
     
     &__img{
-        height: 400px;
+        height: 350px;
         padding: 20px;
+    }
+
+    &__name{
+        padding-bottom: 30px;
     }
 }
 
@@ -40,7 +43,10 @@
     cursor: pointer;
 }
 .ul-apariciones {
-    height: 20px;
+    overflow-y: scroll;
+    height: 250px;
+    padding: 10px;
+    
 }
 .ul-apariciones::-webkit-scrollbar{
     width: 7px;
@@ -48,7 +54,7 @@
 }
 
 .ul-apariciones::-webkit-scrollbar-thumb {
-	background: white;
+    background: white;
 	border-radius: 5px;
 }
 
@@ -59,21 +65,11 @@
 }
 .characterDetails--table{
     width: 90vw;
-    height: 30px;
+    font-size: 18px ;
 
     &__header{
         font-family: GameOfThrones;
         font-size: 20px;
-    }
-
-    &__items{
-        font-size: 18px ;
-        overflow-y: scroll;
-        height: 20px;
-        padding: 10px;
-    }
-    &__items::-webkit-scrollbar{
-        display: none;
     }
     &__ll{
         width: 20px;
