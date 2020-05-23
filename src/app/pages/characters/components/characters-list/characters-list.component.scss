@@ -1,0 +1,35 @@
+.c-character-list{
+  &__img{
+    width: 200px;
+    height: 300px;
+    cursor: pointer;
+  }
+  &__flags {
+    position: absolute;
+    right: 80px;
+    top: 20px;
+  }
+  &__flags img{
+    height: auto;
+    width: 50px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  &__links{
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+  }
+  &__links .pj {
+    text-decoration: underline;
+  }
+  &__container{
+    padding: 20px;
+    font-size: 10px;
+  }
+  
+  font-family: 'GameOfThrones';
+}
