@@ -19,10 +19,15 @@ body{
     display: none;
 }
 .ui-inputtext{
+    margin: 10px 20px;
+    font-size: 16px;
     border: none;
-    width: 400px;
-    border-bottom: solid 3px black;
-    border-left: solid 3px black;
+    width: 30vw;
+    height: 3vh;
+    color: white;
+    background-color: black;
+    border-bottom: solid 3px white;
+    border-left: solid 3px white;
     
 }
 .ui-orderlist{
@@ -30,16 +35,21 @@ body{
 
 }
 .ui-orderlist-list{
-    // border: solid 5px red;
+    border: solid 5px red;
+    overflow-y: scroll;
+    height: 82vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 0;
 }
+.ui-orderlist-list::-webkit-scrollbar{
+    width: 20px;
+    background-color: chartreuse;
+}
 .ui-orderlist-item	{
-    margin: 0;
+    margin: 2vh 0;
     text-align: center;
-    // border: solid 5px blue;
-    width: 23vw;
+    border: solid 5px blue;
 }

@@ -9,8 +9,10 @@
         <ng-template let-char pTemplate="item">
             <div class="item c-character-list__container" [routerLink]="['/characters/', char.name]">
                 <img class="c-character-list__img" src="{{ char.image }}" >
+                <div class="c-character-list__text">
                 <h1>{{char.name}}</h1>
                 <h3>{{char.house}}</h3>
+                </div>
             </div>
         </ng-template>
     </p-orderList>
