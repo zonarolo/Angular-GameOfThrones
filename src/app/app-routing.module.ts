@@ -17,6 +17,9 @@ const routes: Routes = [
   },
   {
     path:"characters/:name", component:CharactersDetailsComponent
+  },
+  {
+    path:"houses", component:HomeComponent
   }
 ];
 

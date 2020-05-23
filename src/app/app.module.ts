@@ -11,6 +11,9 @@ import { OrderListModule } from 'primeng/orderlist';
 import { CharactersDetailsComponent } from './pages/characters/pages/characters-details/characters-details.component';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { HousesListComponent } from './pages/houses/components/houses-list/houses-list.component';
+import { HousesComponent } from './pages/houses/pages/houses/houses/houses.component';
+import { HousesDetailsComponent } from './pages/houses/pages/houses-details/houses-details/houses-details.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -22,7 +25,10 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     HomeComponent,
     CharactersListComponent,
     CharactersComponent,
-    CharactersDetailsComponent
+    CharactersDetailsComponent,
+    HousesListComponent,
+    HousesComponent,
+    HousesDetailsComponent
   ],
   imports: [
     BrowserModule,

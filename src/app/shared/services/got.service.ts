@@ -16,4 +16,8 @@ export class GotService {
   getCharacterName(name){
     return this.httpClient.get(environment.url + '/characters/' + name);
   }
+
+  getAllHouses(){
+    return this.httpClient.get(environment.url + '/houses')
+  }
 }
