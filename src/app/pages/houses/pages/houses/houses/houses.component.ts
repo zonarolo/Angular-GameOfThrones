@@ -15,7 +15,7 @@ export class HousesComponent implements OnInit {
   ngOnInit(): void {
     this.gotService.getAllHouses().subscribe( (res:any) => {
       console.log(res);
-      this.housesList = res.splice(0,10);
+      this.housesList = res.splice(4,200);
     })
   }
 
