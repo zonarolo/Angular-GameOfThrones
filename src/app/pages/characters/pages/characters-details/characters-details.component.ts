@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { GotService } from 'src/app/shared/services/got.service';
 
-
 @Component({
   selector: 'app-characters-details',
   templateUrl: './characters-details.component.html',
