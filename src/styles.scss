@@ -4,6 +4,17 @@
     src: url("../src/assets/fonts/GameofThrones.ttf");
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+
 .ui-button, .ui-orderlist-controls{
     display: none;
 }
@@ -15,11 +26,11 @@
     
 }
 .ui-orderlist{
-    border: solid 5px greenyellow;
+    // border: solid 5px greenyellow;
 
 }
 .ui-orderlist-list{
-    border: solid 5px red;
+    // border: solid 5px red;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -29,6 +40,6 @@
 .ui-orderlist-item	{
     margin: 0;
     text-align: center;
-    border: solid 5px blue;
+    // border: solid 5px blue;
     width: 23vw;
 }

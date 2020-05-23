@@ -15,7 +15,7 @@ export class CharactersComponent implements OnInit {
   ngOnInit(): void {
     this.gotService.getAllCharacters().subscribe( (res:any) => {
       console.log(res);
-      this.charactersList = res.splice(0,10);
+      this.charactersList = res.splice(0,206);
     })
   }
 
