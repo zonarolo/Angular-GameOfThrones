@@ -5,18 +5,6 @@
     cursor: pointer;
     // border: solid 5px violet;
   }
-  &__flags {
-    position: absolute;
-    right: 80px;
-    top: 20px;
-    margin-top: -5px;
-  }
-  &__flags img{
-    height: auto;
-    width: 50px;
-    margin-right: 20px;
-    cursor: pointer;
-  }
   &__links{
     padding: 20px 0;
     display: grid;

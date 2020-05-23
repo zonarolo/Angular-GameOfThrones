@@ -1,4 +1,12 @@
 {
-  "Title": "Translation example",
-  "Intro": "Hello I am {{name}}, I am {{age}} years old."
+  "Title": "GAME OF THRONES",
+  "One": "CHARACTERS",
+  "Two": "HOUSES",
+  "Three": "CHRONOLY",
+  "Four": "HOUSE",
+  "Five": "ALIANCE",
+  "Six": "APPEARANCES",
+  "Seven": "FATHER",
+  "Eight": "DECENDENTS",
+  "Nine": "TITLE"
 }
