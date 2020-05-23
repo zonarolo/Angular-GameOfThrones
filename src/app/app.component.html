@@ -1,1 +1,12 @@
+<h1 translate>Title</h1>
+
+<div>
+  {{ 'Intro' | translate:user }}
+</div>
+
+<button (click)="switchLanguage('en')">en</button>
+
+<button (click)="switchLanguage('es')">es</button>
+
+
 <router-outlet></router-outlet>
