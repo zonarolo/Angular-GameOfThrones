@@ -1,1 +1,20 @@
-<p>houses-list works!</p>
+<div>
+    <p-orderList [value]="houses" filter="filter" filterBy="name"  filterPlaceholder="Search" >
+        <ng-template let-house pTemplate="item">
+            <div *ngIf='house.logoURL && house.logoURL.length'>
+                <img src="{{ house.logoURL }}" >
+                <div>
+                <h1>{{house.name}}</h1>
+                <h3>{{house.house}}</h3>
+                </div>
+            </div>
+        </ng-template>
+    </p-orderList>
+    <div>
+        <p class="pj" [routerLink]="['/houseacters']" translate>One</p>
+        
+        <p translate>Two</p>
+        
+        <p translate>Three</p>
+    </div>
+</div>
