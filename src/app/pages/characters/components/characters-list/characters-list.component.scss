@@ -1,24 +1,15 @@
 .c-character-list{
   &__img{
-<<<<<<< HEAD
-    width: 200px;
-    height: 300px;
-    cursor: pointer;
-=======
     width: 250px;
     height: 100%;
     cursor: pointer;
     // border: solid 5px violet;
->>>>>>> c8af2c920a69551d288aa2c32d7a3b53d0da40c8
   }
   &__flags {
     position: absolute;
     right: 80px;
     top: 20px;
-<<<<<<< HEAD
-=======
     margin-top: -5px;
->>>>>>> c8af2c920a69551d288aa2c32d7a3b53d0da40c8
   }
   &__flags img{
     height: auto;
@@ -38,10 +29,6 @@
     text-decoration: underline;
   }
   &__container{
-<<<<<<< HEAD
-    padding: 20px;
-    font-size: 10px;
-=======
     // padding: 20px;
     font-size: 10px;
     // border: solid 3px orange;
@@ -64,7 +51,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
->>>>>>> c8af2c920a69551d288aa2c32d7a3b53d0da40c8
   }
   
   font-family: 'GameOfThrones';

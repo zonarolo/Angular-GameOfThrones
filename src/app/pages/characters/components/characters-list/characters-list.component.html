@@ -1,8 +1,4 @@
 <div class="c-character-list">
-<<<<<<< HEAD
-    <p>characters-list works!</p>
-=======
->>>>>>> c8af2c920a69551d288aa2c32d7a3b53d0da40c8
     <div class="c-character-list__flags">
         <img src="../../../../../assets/img/white-home.png" [routerLink]="['/home']">
         <img src="../../../../../assets/img/spain.png" >
@@ -12,15 +8,10 @@
         <ng-template let-char pTemplate="item">
             <div class="item c-character-list__container" [routerLink]="['/characters/', char.name]">
                 <img class="c-character-list__img" src="{{ char.image }}" >
-<<<<<<< HEAD
-                <h1>{{char.name}}</h1>
-                <h3>{{char.house}}</h3>
-=======
                 <div class="c-character-list__text">
                 <h1>{{char.name}}</h1>
                 <h3>{{char.house}}</h3>
                 </div>
->>>>>>> c8af2c920a69551d288aa2c32d7a3b53d0da40c8
             </div>
         </ng-template>
     </p-orderList>
