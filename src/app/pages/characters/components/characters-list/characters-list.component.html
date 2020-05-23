@@ -1,0 +1,10 @@
+<p>characters-list works!</p>
+<p-orderList [value]="characters" filter="filter" filterBy="name, house"  filterPlaceholder="Search">
+    <ng-template let-char pTemplate="item">
+        <div class="item" [routerLink]="['/characters/', char.name]">
+            <img src="{{ char.image }}" >
+            <h1>{{char.name}}</h1>
+            <h3>{{char.house}}</h3>
+        </div>
+    </ng-template>
+</p-orderList>

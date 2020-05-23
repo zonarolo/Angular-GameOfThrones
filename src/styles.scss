@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: "GameOfThrones";
+    src: url("../src/assets/fonts/GameofThrones.ttf");
+}
+
+.ui-button, .ui-orderlist-controls{
+    display: none;
+}
+.ui-inputtext{
+    border: none;
+    width: 400px;
+    border-bottom: solid 3px black;
+    border-left: solid 3px black;
+    
+}
+.ui-orderlist{
+    border: solid 5px greenyellow;
+
+}
+.ui-orderlist-list{
+    border: solid 5px red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+}
+.ui-orderlist-item	{
+    margin: 0;
+    text-align: center;
+    border: solid 5px blue;
+    width: 23vw;
+}
