@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,13 +15,12 @@ export class AppComponent {
     age: 25
   };
 
-  constructor(public translate: TranslateService) {
+  constructor(public translate: TranslateService, public _router: Router) {
     translate.addLangs(['es', 'en']);
     translate.setDefaultLang('es');
 
     const browserLang = translate.getBrowserLang();
     translate.use(browserLang.match(/es|en/) ? browserLang : 'es');
-
   }
 
   switchLanguage(language: string) {

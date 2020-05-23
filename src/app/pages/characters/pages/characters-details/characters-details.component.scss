@@ -27,26 +27,37 @@
     justify-content: center;
     align-items: center;
     font-family: GameOfThrones;
+    padding: 10px;
     
     &__img{
         height: 400px;
+        padding: 20px;
     }
 }
 
 .flecha {
-    font-size: 30px;
+    font-size: 35px;
     cursor: pointer;
+}
+.ul-apariciones {
+    height: 20px;
+}
+.ul-apariciones::-webkit-scrollbar{
+    width: 7px;
+    background: #333333;
+}
 
+.ul-apariciones::-webkit-scrollbar-thumb {
+	background: white;
+	border-radius: 5px;
 }
 
 .characterDetails{
-    // border: solid 5px blue;
     text-align: center;
     display: flex;
     justify-content: center;
 }
 .characterDetails--table{
-    // border: solid 5px pink;
     width: 90vw;
     height: 30px;
 
@@ -56,18 +67,15 @@
     }
 
     &__items{
-        // border: solid 5px pink;
         font-size: 18px ;
         overflow-y: scroll;
         height: 20px;
-
+        padding: 10px;
     }
     &__items::-webkit-scrollbar{
-            width: 20px;
-
+        display: none;
     }
     &__ll{
         width: 20px;
-        // border: yellow solid 10px;
     }
 }
