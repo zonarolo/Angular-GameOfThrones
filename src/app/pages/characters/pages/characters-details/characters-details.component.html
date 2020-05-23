@@ -2,11 +2,6 @@
     <div class="header__link">
         <a [routerLink]="['/characters']">Atras</a>
     </div>
-    <div class="header__flags">
-        <img src="../../../../../assets/img/white-home.png" [routerLink]="['/home']">
-        <img src="../../../../../assets/img/spain.png" >
-        <img src="../../../../../assets/img/united-kingdom.png"/>
-    </div>
 </header>
 <div class="character">
 <img class="character__img" src="{{character.image}}" alt="">
@@ -16,12 +11,12 @@
 
 <table class="characterDetails--table">
 <tr class="characterDetails--table__header">
-    <th>Casa</th>
-    <th>Alianzas</th>
-    <th>Apariciones</th>
-    <th>Padre</th>
-    <th>Descendientes</th>
-    <th>Titulo</th>
+    <th translate>Four</th>
+    <th translate>Five</th>
+    <th translate>Six</th>
+    <th translate>Seven</th>
+    <th translate>Eight</th>
+    <th translate>Nine</th>
 </tr>
 <tr class="characterDetails--table__ll">
     <td>{{character.house}}</td>

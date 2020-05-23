@@ -1,4 +1,12 @@
 {
-  "Title": "Ejemplo de traduccion",
-  "Intro": "Me llamo {{name}} y tengo {{age}} a;os"
+  "Title": "JUAEGO DE TRONOS",
+  "One": "PERSONAJES",
+  "Two": "CASAS",
+  "Three": "CRONOLOGIA",
+  "Four": "CASA",
+  "Five": "ALIANZA",
+  "Six": "APARICIONES",
+  "Seven": "PADRE",
+  "Eight": "DESCENDIENTES",
+  "Nine": "TITULO"
 }

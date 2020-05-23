@@ -1,12 +1,7 @@
-<h1 translate>Title</h1>
-
-<div>
-  {{ 'Intro' | translate:user }}
+<div class="flags">
+  <img src="../../../../../assets/img/white-home.png" [routerLink]="['/home']">
+  <img (click)="switchLanguage('es')" src="../../../../../assets/img/spain.png" >
+  <img (click)="switchLanguage('en')" src="../../../../../assets/img/united-kingdom.png"/>
 </div>
-
-<button (click)="switchLanguage('en')">en</button>
-
-<button (click)="switchLanguage('es')">es</button>
-
 
 <router-outlet></router-outlet>
