@@ -1,6 +1,16 @@
-<p>GAME OF THRONES</p>
-<P [routerLink]="['/characters']">PERSONAJES</P>
-
-<P>CASAS</P>
-
-<P>CRONOLOGIA</P>
+<div class="c-got-home" [ngStyle]="{backgroundImage:'url(../../../assets/img/fondoGOT.svg)'}">
+  <div class="c-got-home__flags">
+    <img src="../../../assets/img/spain.png" >
+    <img src="../../../assets/img/united-kingdom.png"/>
+  </div>
+  <p class="c-got-home__title">GAME OF THRONES</p>
+  
+  
+  <div class="c-got-home__links">
+    <p  [routerLink]="['/characters']">PERSONAJES</p>
+    
+    <p>CASAS</p>
+    
+    <p>CRONOLOGIA</p>
+  </div>
+</div>

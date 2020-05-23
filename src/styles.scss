@@ -4,6 +4,17 @@
     src: url("../src/assets/fonts/GameofThrones.ttf");
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+
 .ui-button, .ui-orderlist-controls{
     display: none;
 }
