@@ -1,3 +1,67 @@
 *{
     color: white;
+    list-style: none;
+}
+
+.header{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 30px;
+
+    &__flags{
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__flags > img{
+        width: 40px;
+        height: 45px;
+    }
+}
+.character{
+    border: solid 5px yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: GameOfThrones;
+    
+    &__img{
+        height: 400px;
+    }
+}
+
+.characterDetails{
+    border: solid 5px blue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.characterDetails--table{
+    border: solid 5px pink;
+    width: 90vw;
+    height: 30px;
+
+    &__header{
+        font-family: GameOfThrones;
+        font-size: 20px;
+    }
+
+    &__items{
+        border: solid 5px pink;
+        font-size: 18px ;
+        overflow-y: scroll;
+        height: 20px;
+
+        }
+    &__items::-webkit-scrollbar{
+            width: 20px;
+
+    }
+    &__ll{
+        width: 20px;
+        border: yellow solid 10px;
+    }
 }

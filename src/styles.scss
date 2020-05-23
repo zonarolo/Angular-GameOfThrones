@@ -14,7 +14,6 @@ body{
     background-color: black;
 }
 
-
 .ui-button, .ui-orderlist-controls{
     display: none;
 }
@@ -43,9 +42,9 @@ body{
     justify-content: space-around;
     padding: 0;
 }
-.ui-orderlist-list::-webkit-scrollbar{
-    width: 20px;
-}
+// .ui-orderlist-list::-webkit-scrollbar{
+//     width: 20px;
+// }
 .ui-orderlist-item	{
     margin: 2vh 0;
     text-align: center;
