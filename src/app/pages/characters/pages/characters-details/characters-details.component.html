@@ -1,6 +1,6 @@
 <header class="header">
     <div class="header__link">
-        <div [routerLink]="['/characters']" class="flecha">&#x2190;</div>
+        <div [routerLink]="['/characters']" class="flecha"><i class="fas fa-arrow-left"></i><span class="flecha__name">Volver</span></div>
     </div>
 </header>
 <div class="character">
@@ -21,9 +21,11 @@
 <tr class="characterDetails--table__ll">
     <td>{{character.house}}</td>
     <td class="characterDetails--table__items">
-        <ul *ngFor="let allegiance of character.allegiances">
-            <li>{{allegiance}}</li>
-        </ul>
+        <div class="ul-apariciones">
+            <ul *ngFor="let allegiance of character.allegiances">
+                <li>{{allegiance}}</li>
+            </ul>
+        </div>
     </td>
 <td class="characterDetails--table__items">
         <div class="ul-apariciones">
@@ -34,14 +36,18 @@
 </td>
     <td>{{character.father}}</td>
     <td class="characterDetails--table__items">
-        <ul *ngFor="let sibling of character.siblings">
-            <li>{{sibling}}</li>
-        </ul>
+        <div class="ul-apariciones">
+            <ul *ngFor="let sibling of character.siblings">
+                <li>{{sibling}}</li>
+            </ul>
+        </div>
     </td>
     <td class="characterDetails--table__items">
-        <ul *ngFor="let title of character.titles">
-            <li>{{title}}</li>
-        </ul>
+        <div class="ul-apariciones">
+            <ul *ngFor="let title of character.titles">
+                <li>{{title}}</li>
+            </ul>
+        </div>
     </td>
 
 </tr>
