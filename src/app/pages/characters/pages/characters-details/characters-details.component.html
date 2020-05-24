@@ -19,8 +19,11 @@
     <th translate>Nine</th>
 </tr>
 <tr class="characterDetails--table__ll">
-    <td>{{character.house}}
-        <img src="{{logoHouse}}" alt="">
+    <td>
+        <div class="container">
+        <img class="characterDetails--table__logoHouse" src="{{logoHouse}}" alt="">
+        {{character.house}}
+        </div>
     </td>
     <td class="characterDetails--table__items">
         <div class="ul-apariciones">
