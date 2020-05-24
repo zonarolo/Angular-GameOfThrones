@@ -6,7 +6,9 @@
             [routerLink]="['/characters/', char.name]" 
             *ngIf='char.image && char.image.length'[routerLink]="['/characters/' + char.name]" data-simplebar="c-character-list"
             >
-                <img class="c-character-list__img" src="{{ char.image }}" >
+            <img  *ngIf="char.name == 'Grenn'" class="c-character-list__img" src="https://static.wikia.nocookie.net/daef9c6c-cd8b-4015-b211-6e1e26d00fd3">
+            <img  *ngIf="char.name == 'Oberyn Martell'" class="c-character-list__img" src="../../../assets/img/Oberyn.jpg">
+            <img  *ngIf="char.name !== 'Oberyn Martell' && char.name !== 'Grenn'"class="c-character-list__img" src="{{ char.image }}" >
                 <div class="c-character-list__text">
                 <h1>{{char.name}}</h1>
                 <h3>{{char.house}}</h3>

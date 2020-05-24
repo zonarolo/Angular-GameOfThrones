@@ -46,7 +46,7 @@ export class CharactersDetailsComponent implements OnInit {
 
           }else if (this.character.name == "Oberyn Martell"){
             this.character.image = "../../../assets/img/Oberyn.jpg"
-          }
+          } 
 
     })
     
