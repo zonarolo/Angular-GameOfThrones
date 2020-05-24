@@ -29,7 +29,8 @@ export class CharactersDetailsComponent implements OnInit {
       this.character = (character);
       this.houseName = (character)
       this.houseName = ((this.houseName.house))
-      console.log(this.character.house)
+      console.log(this.character.house);
+      
       this.gotService.getAllHouses().subscribe( (res:any) => {
         res.forEach( elemento => {
           if( elemento.name === this.houseName){

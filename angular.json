@@ -90,7 +90,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/img/fondoGOT1024.jpg"
             ],
             "styles": [
               "src/styles.scss"

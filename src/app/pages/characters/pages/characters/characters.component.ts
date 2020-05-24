@@ -18,5 +18,4 @@ export class CharactersComponent implements OnInit {
       this.charactersList = res.splice(0,206);
     })
   }
-
 }
