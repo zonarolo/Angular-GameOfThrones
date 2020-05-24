@@ -3,7 +3,7 @@
  
     <div class="c-timeline--content__left c-timeline--content__container" *ngFor="let character of charactersList">
       <ng-container *ngIf="character.age.age <= 100">
-      <div class="c-timeline--content__content"  >
+      <div class="c-timeline--content__content" >
         <h2>{{character.age.age}} </h2>
         <h4>{{character.name}}</h4>
         <img  *ngIf="character.name == 'Oberyn Martell'" class="c-character-list__img" src="../../../assets/img/Oberyn.jpg">
@@ -12,23 +12,4 @@
       </ng-container>
 
   </div>
-    <!-- <div class="c-timeline--content__right c-timeline--content__container">
-      <div class="c-timeline--content__content">
-        <p>Juan</p>
-        <p>Hola me llamo juan</p>
-        <img src="" >
-      </div>
-    </div>
-    
-    
-  </div> -->
-<!-- </div>
-<div class="c-timelime--footer">
-  <div class="c-timeline--footer__links">
-    <p [routerLink]="['/characters']" translate>One</p>
-    
-    <p translate [routerLink]="['/houses']">Two</p>
-    
-    <p class="c-timeline--footer__under" translate [routerLink]="['/timeline']">Three</p>
-  </div> -->
 </div>
