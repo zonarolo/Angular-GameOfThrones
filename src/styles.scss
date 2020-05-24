@@ -51,3 +51,10 @@ body{
     margin: 2vh 0;
     text-align: center;
 }
+@media screen and (max-width: 1025px){
+    .c-got-home{
+    background-image: url('../src/assets/img/fondoGOT1024.jpg');
+    min-height: 100vh;
+    min-width: 100vw;
+}
+}
