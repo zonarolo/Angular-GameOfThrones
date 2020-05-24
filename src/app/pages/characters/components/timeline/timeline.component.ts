@@ -8,7 +8,7 @@ import { GotService } from 'src/app/shared/services/got.service';
 })
 export class TimelineComponent implements OnInit {
 
-  charactersList : Array<any>;
+  charactersList : Array<any> = [];
   charactersListPar : Array<any>;
   charactersListImpar : Array<any>;
 
@@ -24,17 +24,27 @@ export class TimelineComponent implements OnInit {
 
   ngOnInit(): void {
     this.gotService.getAllCharacters().subscribe( (res:any) => {
-      // console.log(res);
       res.forEach(element => {
-        // console.log(element.name);
-        // console.log(element.age);
-        if (element.age != null && element.age != undefined){
-          this.charactersList.push(element.age);
-          // console.log(element.age);
+        let elementAge = element.age;   
+        this.image = element.image;
+        let char: Array<any> = [];
+
+        if (elementAge != null && elementAge.age && element.image){
+          char.push(elementAge);
+          (this.charactersList).push(char);
         }
       });
-      console.log(this.charactersList);
-    })
+    });
+    (this.charactersList).sort(function (a, b) {
+        if (a.name > b.name) {
+          return 1;
+        }
+        if (a.name < b.name) {
+          return -1;
+        }
+        // a must be equal to b
+        return 0;
+    });
+    console.log(this.charactersList.[0].age)
   }
-
 }
