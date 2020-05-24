@@ -3,9 +3,94 @@
   font-family: 'GameOfThrones';
 }
 .c-timeline--content{
-  height: 1000px;
   position: absolute;
-  // width: ;
+  top: 80px;
+  left: 83px;
+  width: 90vw;
+  overflow-y: scroll;
+  height: 82vh;
+
+  &__timeline{
+    position: relative;
+    min-width: 1200px;
+    margin: 0 auto;
+  }
+  &__timeline:after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  &__container{
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  &__container:after{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    right: -3px;
+    background-color: white;
+    border: 1px solid #fff;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  &__left{
+    left: 0;
+  }
+  &__right{
+    // left: 50%;
+  }
+  &__left:before{
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 10px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  &__right:before{
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  &__right{
+    left: -0px;
+  }
+  &__content{
+    padding: 20px 30px;
+    // background-color: white;
+    position: relative;
+    border-radius: 5px;
+
+  }
+}
+.c-timeline--content::-webkit-scrollbar{
+  width: 7px;
+  background: #333333
+}
+.c-timeline--content::-webkit-scrollbar-thumb {
+background: white;
+border-radius: 5px;
 }
 .c-timeline--footer{
   &__links{
