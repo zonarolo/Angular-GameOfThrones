@@ -45,12 +45,14 @@
   &__content{
     padding: 20px 30px;
     position: relative;
-    border-radius: 5px;
     text-align: center;
     line-height: 2;
   }
   &__content img{
     border-radius: 50%;
+    height: 150px;
+    width: 150px;
+
   }
 }
 

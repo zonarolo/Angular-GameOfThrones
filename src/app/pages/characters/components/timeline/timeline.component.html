@@ -2,11 +2,14 @@
   <div class="c-timeline--content__timeline">
  
     <div class="c-timeline--content__left c-timeline--content__container" *ngFor="let character of charactersList">
-      <div class="c-timeline--content__content" >
+      <ng-container *ngIf="character.age.age <= 100">
+      <div class="c-timeline--content__content"  >
         <h2>{{character.age.age}} </h2>
         <h4>{{character.name}}</h4>
-        <!-- <img src="{{character.image}}" > -->
+        <img  *ngIf="character.name == 'Oberyn Martell'" class="c-character-list__img" src="../../../assets/img/Oberyn.jpg">
+        <img *ngIf="character.name !== 'Oberyn Martell'" src="{{character.image}}" >
       </div>
+      </ng-container>
 
   </div>
     <!-- <div class="c-timeline--content__right c-timeline--content__container">
