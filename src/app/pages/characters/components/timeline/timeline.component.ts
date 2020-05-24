@@ -8,9 +8,9 @@ import { GotService } from 'src/app/shared/services/got.service';
 })
 export class TimelineComponent implements OnInit {
 
-  charactersList : Array<any> = [];
-  charactersListPar : Array<any>;
-  charactersListImpar : Array<any>;
+  charactersList;
+  charactersListPar;
+  charactersListImpar;
 
   age:number;
   name:string;
@@ -24,29 +24,36 @@ export class TimelineComponent implements OnInit {
 
   ngOnInit(): void {
     this.gotService.getAllCharacters().subscribe( (res:any) => {
+      
+      let char: Array<any> = [];
+
       res.forEach(element => {
-        let char: Array<any> = [];
+
         let elementAge = element.age;   
 
         if (elementAge != null && elementAge.age && element.image){
-          char.push(element.age.age);
-          char.push(element.age.name);
-          char.push(element.image);
-          (this.charactersList).push(char);
+ 
+          char.push(element)
+
         }
-      });
-    });
-    
-    (this.charactersList).sort(function (a, b) {
-      if (a > b) {
+        char.sort(function (a ,b ){
+        if (a.age.age > b.age.age) {
         return 1;
       }
-      if (a < b) {
+      if (a.age.age < b.age.age) {
         return -1;
       }
-      // a must be equal to b
-      return 0;
-    });
-    console.log(this.charactersList);
+      return 0; 
+        }
+        )
+        this.charactersList = char
+      });
+
+      console.log(this.charactersList)
+      
+
+      });
+
   }
+
 }

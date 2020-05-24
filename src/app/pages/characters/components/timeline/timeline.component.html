@@ -1,11 +1,11 @@
 <div class="c-timeline--content">
   <div class="c-timeline--content__timeline">
     <div class="c-timeline--content__left c-timeline--content__container">
-      <div class="c-timeline--content__content">
-        <p>Juan</p>
-        <p>Hola me llamo juan</p>
+      <ul class="c-timeline--content__content" *ngFor="let character of charactersList" >
+        <li>{{character.age.age}} <br>
+          {{character.name}}</li>
         <img src="" >
-      </div>
+      </ul>
     </div>
     <div class="c-timeline--content__right c-timeline--content__container">
       <div class="c-timeline--content__content">
