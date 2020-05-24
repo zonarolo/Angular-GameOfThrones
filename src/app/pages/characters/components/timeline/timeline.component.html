@@ -1,13 +1,15 @@
 <div class="c-timeline--content">
   <div class="c-timeline--content__timeline">
-    <div class="c-timeline--content__left c-timeline--content__container">
-      <ul class="c-timeline--content__content" *ngFor="let character of charactersList" >
-        <li>{{character.age.age}} <br>
-          {{character.name}}</li>
-        <img src="" >
-      </ul>
-    </div>
-    <div class="c-timeline--content__right c-timeline--content__container">
+ 
+    <div class="c-timeline--content__left c-timeline--content__container" *ngFor="let character of charactersList">
+      <div class="c-timeline--content__content" >
+        <h2>{{character.age.age}} </h2>
+        <h4>{{character.name}}</h4>
+        <!-- <img src="{{character.image}}" > -->
+      </div>
+
+  </div>
+    <!-- <div class="c-timeline--content__right c-timeline--content__container">
       <div class="c-timeline--content__content">
         <p>Juan</p>
         <p>Hola me llamo juan</p>
@@ -16,8 +18,8 @@
     </div>
     
     
-  </div>
-</div>
+  </div> -->
+<!-- </div>
 <div class="c-timelime--footer">
   <div class="c-timeline--footer__links">
     <p [routerLink]="['/characters']" translate>One</p>
@@ -25,5 +27,5 @@
     <p translate [routerLink]="['/houses']">Two</p>
     
     <p class="c-timeline--footer__under" translate [routerLink]="['/timeline']">Three</p>
-  </div>
+  </div> -->
 </div>

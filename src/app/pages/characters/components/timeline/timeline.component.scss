@@ -36,6 +36,9 @@
   &__left{
     left: 19.95%;
   }
+  &__left:nth-child(even){
+    left: 50%;
+  }
   &__right {
     left: 49.95%;
   }
