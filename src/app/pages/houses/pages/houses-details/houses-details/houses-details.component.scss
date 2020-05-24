@@ -1,34 +1,35 @@
 *{
     color: white;
     list-style: none;
+    margin: 0;
 }
 
 .header{
-    margin: 0;
     display: flex;
     justify-content: space-between;
     margin: 20px 30px;
+}
 
-    &__flags{
-        width: 150px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__flags > img{
-        width: 40px;
-        height: 45px;
+.flecha {
+    font-size: 25px;
+    cursor: pointer;
+    &__name{
+        margin-left: 20px;
     }
 }
+
 .house{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 0 50px 0;
     font-family: GameOfThrones;
-    
+    font-size: 25px;
+
     &__img{
-        height: 400px;
+        height: 300px;
+        margin: 0 0 30px 0;
     }
 }
 
@@ -36,27 +37,23 @@
     text-align: center;
     display: flex;
     justify-content: center;
+    font-family: GameOfThrones;
 }
+
 .houseDetails--table{
     width: 90vw;
     height: 30px;
+    line-height: 3;
 
     &__header{
-        font-family: GameOfThrones;
-        font-size: 20px;
+        font-size: 25px;
     }
-
+    
     &__items{
-        font-size: 18px ;
-        overflow-y: scroll;
-        height: 20px;
-
-        }
-    &__items::-webkit-scrollbar{
-            width: 20px;
-
+        font-size: 15px ;
     }
-    &__ll{
-        width: 20px;
+    
+    &__items::-webkit-scrollbar{
+        display: none;
     }
 }
