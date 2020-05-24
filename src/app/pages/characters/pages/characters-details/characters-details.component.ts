@@ -11,6 +11,9 @@ export class CharactersDetailsComponent implements OnInit {
 
   name: string;
   character;
+  house;
+  houseName;
+  logoHouse;
 
   constructor(private activatedRoute: ActivatedRoute, private gotService: GotService) {
     this.activatedRoute.params.subscribe((params) => {
@@ -23,8 +26,16 @@ export class CharactersDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.gotService.getCharacterName(this.name).subscribe(character => {
       this.character = (character);
-      console.log (character)
+      this.houseName = (character)
+      this.houseName = ((this.houseName.house))
     })
-  }
+    this.gotService.getAllHouses().subscribe( (res:any) => {
+      res.forEach( elemento => {
+        if( elemento.name === this.houseName){
+          console.log(elemento.logoURL)
+          this.logoHouse = elemento.logoURL;
+        }
+      });
+    })  }
 
 }

@@ -19,7 +19,9 @@
     <th translate>Nine</th>
 </tr>
 <tr class="characterDetails--table__ll">
-    <td>{{character.house}}</td>
+    <td>{{character.house}}
+        <img src="{{logoHouse}}" alt="">
+    </td>
     <td class="characterDetails--table__items">
         <div class="ul-apariciones">
             <ul *ngFor="let allegiance of character.allegiances">

@@ -1,0 +1,62 @@
+*{
+    color: white;
+    list-style: none;
+}
+
+.header{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 30px;
+
+    &__flags{
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__flags > img{
+        width: 40px;
+        height: 45px;
+    }
+}
+.house{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: GameOfThrones;
+    
+    &__img{
+        height: 400px;
+    }
+}
+
+.houseDetails{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.houseDetails--table{
+    width: 90vw;
+    height: 30px;
+
+    &__header{
+        font-family: GameOfThrones;
+        font-size: 20px;
+    }
+
+    &__items{
+        font-size: 18px ;
+        overflow-y: scroll;
+        height: 20px;
+
+        }
+    &__items::-webkit-scrollbar{
+            width: 20px;
+
+    }
+    &__ll{
+        width: 20px;
+    }
+}
