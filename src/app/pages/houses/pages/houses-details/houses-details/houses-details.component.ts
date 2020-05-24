@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { GotService } from 'src/app/shared/services/got.service';
+import { HttpBackend } from '@angular/common/http';
 
 @Component({
   selector: 'app-houses-details',
@@ -25,6 +26,10 @@ export class HousesDetailsComponent implements OnInit {
       this.house = (house[0]);
       console.log (this.house)
     })
+  }
+
+  back(){
+    window.history.go(-1);
   }
 
 }
