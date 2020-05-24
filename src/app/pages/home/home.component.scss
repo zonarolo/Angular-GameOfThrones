@@ -20,4 +20,9 @@
     color: white;
     font-family: 'GameOfThrones';
 }
-
+ 
+@media (max-width:1025px){
+    .c-got-home{
+        background-image: url('../../../assets/img/fondoGOT1024.jpg');
+    } 
+}

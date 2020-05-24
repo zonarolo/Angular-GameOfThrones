@@ -37,7 +37,10 @@ export class CharactersDetailsComponent implements OnInit {
             this.logoHouse = elemento.logoURL;
           }else if (this.character.house == "House Baratheon of King&apos;s Landing"){
             this.logoHouse = "https://vignette.wikia.nocookie.net/gameofthrones/images/4/43/House-Baratheon-of-King%27s_Landing-Main-Shield.PNG"
+          }else if (this.character.house == "House Cassel"){
+            this.logoHouse = "https://awoiaf.westeros.org/images/c/c3/House_Cassel.PNG"
           }
+
     })
     
       });
