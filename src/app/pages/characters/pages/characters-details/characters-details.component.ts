@@ -28,13 +28,14 @@ export class CharactersDetailsComponent implements OnInit {
       this.character = (character);
       this.houseName = (character)
       this.houseName = ((this.houseName.house))
+      this.gotService.getAllHouses().subscribe( (res:any) => {
+        res.forEach( elemento => {
+          if( elemento.name === this.houseName){
+            console.log(elemento.logoURL)
+            this.logoHouse = elemento.logoURL;
+          }
     })
-    this.gotService.getAllHouses().subscribe( (res:any) => {
-      res.forEach( elemento => {
-        if( elemento.name === this.houseName){
-          console.log(elemento.logoURL)
-          this.logoHouse = elemento.logoURL;
-        }
+    
       });
     })  }
 
