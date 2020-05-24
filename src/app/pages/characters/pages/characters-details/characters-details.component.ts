@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { GotService } from 'src/app/shared/services/got.service';
-import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-characters-details',
