@@ -15,6 +15,7 @@ export class CharactersDetailsComponent implements OnInit {
   house;
   houseName;
   logoHouse;
+  image;
 
   constructor(private activatedRoute: ActivatedRoute, private gotService: GotService) {
     this.activatedRoute.params.subscribe((params) => {
@@ -40,6 +41,11 @@ export class CharactersDetailsComponent implements OnInit {
             this.logoHouse = "https://vignette.wikia.nocookie.net/gameofthrones/images/4/43/House-Baratheon-of-King%27s_Landing-Main-Shield.PNG"
           }else if (this.character.house == "House Cassel"){
             this.logoHouse = "https://awoiaf.westeros.org/images/c/c3/House_Cassel.PNG"
+          }else if (this.character.house == "Faith of the Seven"){ 
+            this.logoHouse = "../../../assets/img/House-Faith-Militant.png"
+
+          }else if (this.character.name == "Oberyn Martell"){
+            this.character.image = "../../../assets/img/Oberyn.jpg"
           }
 
     })
