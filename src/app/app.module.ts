@@ -15,6 +15,7 @@ import { HousesListComponent } from './pages/houses/components/houses-list/house
 import { HousesComponent } from './pages/houses/pages/houses/houses/houses.component';
 import { HousesDetailsComponent } from './pages/houses/pages/houses-details/houses-details/houses-details.component';
 import { SimplebarAngularModule } from 'simplebar-angular';
+import { TimelineComponent } from './pages/characters/components/timeline/timeline.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -29,7 +30,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     CharactersDetailsComponent,
     HousesListComponent,
     HousesComponent,
-    HousesDetailsComponent
+    HousesDetailsComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,
