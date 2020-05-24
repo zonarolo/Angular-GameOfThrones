@@ -25,26 +25,28 @@ export class TimelineComponent implements OnInit {
   ngOnInit(): void {
     this.gotService.getAllCharacters().subscribe( (res:any) => {
       res.forEach(element => {
-        let elementAge = element.age;   
-        this.image = element.image;
         let char: Array<any> = [];
+        let elementAge = element.age;   
 
         if (elementAge != null && elementAge.age && element.image){
-          char.push(elementAge);
+          char.push(element.age.age);
+          char.push(element.age.name);
+          char.push(element.image);
           (this.charactersList).push(char);
         }
       });
     });
+    
     (this.charactersList).sort(function (a, b) {
-        if (a.name > b.name) {
-          return 1;
-        }
-        if (a.name < b.name) {
-          return -1;
-        }
-        // a must be equal to b
-        return 0;
+      if (a > b) {
+        return 1;
+      }
+      if (a < b) {
+        return -1;
+      }
+      // a must be equal to b
+      return 0;
     });
-    console.log(this.charactersList.[0].age)
+    console.log(this.charactersList);
   }
 }
