@@ -1,5 +1,5 @@
 <div class="flags">
-  <img src="../../../../../assets/img/white-home.png" [routerLink]="['/home']" *ngIf="_router.url != '/home'">
+  <i [routerLink]="['/home']" *ngIf="_router.url != '/home'" class="fas fa-home fa-3x"></i>
   <img (click)="switchLanguage('es')" src="../../../../../assets/img/spain.png" >
   <img (click)="switchLanguage('en')" src="../../../../../assets/img/united-kingdom.png"/>
 </div>
