@@ -48,7 +48,11 @@ export class CharactersDetailsComponent implements OnInit {
             this.character.image = "../../../assets/img/Oberyn.jpg"
           }else if (this.character.name == 'Grenn' ){
             this.character.image = "https://static.wikia.nocookie.net/daef9c6c-cd8b-4015-b211-6e1e26d00fd3"
-          } 
+          } else if (this.character.house == 'Good Masters' || this.character.house == "Wise Masters"){
+            this.logoHouse = "https://vignette.wikia.nocookie.net/gameofthrones/images/5/5e/SlaveMasters-Shield.PNG/revision/latest?cb=20160903142151"
+          }else if (this.character.house == 'Second Sons' || this.character.house == 'Second Sons (mercenary company)' ){
+            this.logoHouse = "https://vignette.wikia.nocookie.net/gameofthrones/images/9/9e/Second-Sons-Shield.PNG/revision/latest?cb=20170606020329"
+          }
 
 
     })

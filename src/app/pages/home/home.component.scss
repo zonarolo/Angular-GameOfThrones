@@ -21,8 +21,11 @@
     font-family: 'GameOfThrones';
 }
  
-@media (max-width:1025px){
+@media screen and (max-width: 1025px){
     .c-got-home{
-        background-image: url('../../../assets/img/fondoGOT1024.jpg');
-    } 
+    background-image: url('../../../assets/img/fondoGOT1024.jpg');
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
 }

@@ -20,7 +20,7 @@
 </tr>
 <tr class="characterDetails--table__ll">
     <td>
-        <div class="container">
+        <div class="container" [routerLink]="['/houses/', character.house]">
         <img class="characterDetails--table__logoHouse" src="{{logoHouse}}" alt="">
         {{character.house}}
         </div>
