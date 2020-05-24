@@ -1,5 +1,5 @@
 <div class="c-houses-list" >
-    <p-orderList [value]="houses" filter="filter" filterBy="name"  filterPlaceholder="Search" >
+    <p-orderList [value]="houses" filter="filter" filterBy="name"  filterPlaceholder=" 🔍 ..." >
         <ng-template let-house pTemplate="item">
             <div class="item c-houses-list__container" *ngIf='house.logoURL && house.logoURL.length'[routerLink]="['/houses/' + house.name]" >
                 <img class="c-houses-list__img" src="{{ house.logoURL }}" >

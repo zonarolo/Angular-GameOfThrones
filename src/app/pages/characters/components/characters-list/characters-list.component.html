@@ -1,5 +1,5 @@
 <div class="c-character-list">
-    <p-orderList [value]="characters" filter="filter" filterBy="name, house"  filterPlaceholder="Search" >
+    <p-orderList [value]="characters" filter="filter" filterBy="name, house"  filterPlaceholder=" 🔍 ..." >
         <ng-template let-char pTemplate="item" data-simplebar>
             <div class="item c-character-list__container" [routerLink]="['/characters/', char.name]" data-simplebar="c-character-list">
                 <img class="c-character-list__img" src="{{ char.image }}" >
