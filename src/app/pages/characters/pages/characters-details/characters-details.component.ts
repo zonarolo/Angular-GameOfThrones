@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { GotService } from 'src/app/shared/services/got.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-characters-details',
@@ -28,11 +29,14 @@ export class CharactersDetailsComponent implements OnInit {
       this.character = (character);
       this.houseName = (character)
       this.houseName = ((this.houseName.house))
+      console.log(this.character.house)
       this.gotService.getAllHouses().subscribe( (res:any) => {
         res.forEach( elemento => {
           if( elemento.name === this.houseName){
             console.log(elemento.logoURL)
             this.logoHouse = elemento.logoURL;
+          }else if (this.character.house == "House Baratheon of King&apos;s Landing"){
+            this.logoHouse = "https://vignette.wikia.nocookie.net/gameofthrones/images/4/43/House-Baratheon-of-King%27s_Landing-Main-Shield.PNG"
           }
     })
     
