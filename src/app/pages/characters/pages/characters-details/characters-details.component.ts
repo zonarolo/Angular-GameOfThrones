@@ -46,7 +46,10 @@ export class CharactersDetailsComponent implements OnInit {
 
           }else if (this.character.name == "Oberyn Martell"){
             this.character.image = "../../../assets/img/Oberyn.jpg"
+          }else if (this.character.name == 'Grenn' ){
+            this.character.image = "https://static.wikia.nocookie.net/daef9c6c-cd8b-4015-b211-6e1e26d00fd3"
           } 
+
 
     })
     
