@@ -5,6 +5,7 @@ import { CharactersComponent } from './pages/characters/pages/characters/charact
 import { CharactersDetailsComponent } from './pages/characters/pages/characters-details/characters-details.component';
 import { HousesComponent } from './pages/houses/pages/houses/houses/houses.component';
 import { HousesDetailsComponent } from './pages/houses/pages/houses-details/houses-details/houses-details.component';
+import { TimelineComponent } from './pages/characters/components/timeline/timeline.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,9 @@ const routes: Routes = [
   },
   {
     path:"houses/:name", component:HousesDetailsComponent
+  },
+  {
+    path:"timeline", component:TimelineComponent
   }
 ];
 
