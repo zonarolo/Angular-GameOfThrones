@@ -9,20 +9,10 @@ import { GotService } from 'src/app/shared/services/got.service';
 export class TimelineComponent implements OnInit {
 
   charactersList;
-  charactersListPar;
-  charactersListImpar;
-  num: number = 16;
-
-  age:number;
-  name:string;
-  image;
+  num: number = 16; 
   controller: boolean = true;
 
-  @Input() characters: Array<any>;
-
-  constructor(private gotService: GotService) {
-    
-  }
+  constructor(private gotService: GotService) {}
 
   ngOnInit(): void {
     this.gotService.getAllCharacters().subscribe( (res:any) => {
@@ -30,50 +20,38 @@ export class TimelineComponent implements OnInit {
       let char: Array<any> = [];
 
       res.forEach(element => {
+        let elementAge = element.age;
 
-        let elementAge = element.age;   
+        if (elementAge != null && elementAge.age && element.image) char.push(element);
 
-        if (elementAge != null && elementAge.age && element.image){
- 
-          char.push(element)
-
-        }
         char.sort(function (a ,b ){
-        if (a.age.age > b.age.age) {
-        return 1;
-      }
-      if (a.age.age < b.age.age) {
-        return -1;
-      }
-      return 0; 
-        }
-        )
+          if (a.age.age > b.age.age) return 1;
+          if (a.age.age < b.age.age) return -1;
+          return 0; 
+        });
+
         this.charactersList = char
       });
       
-      console.log(this.charactersList[143].age.age)
     });
   }
   order(){
     this.controller = !this.controller;
+
     if (this.controller) {
       this.charactersList.sort((a, b) => {
         if (a.age.age > b.age.age) return 1;
         if (a.age.age < b.age.age) return -1;
         return 0;
       });
-      // for (let item of this.ageOrder) {
-        //   console.log(item.age);
-        // }
     } else {
       this.charactersList.sort((a, b) => {
         if (a.age.age < b.age.age) return 1;
         if (a.age.age > b.age.age) return -1;
         return 0;
       });
-      // for (let item of this.ageOrder) {
-        //   console.log(item.age);
-      }
-      this.controller ? this.num=this.charactersList[0].age.age : this.num= this.charactersList[1].age.age;
+    }
+
+    this.controller ? this.num=this.charactersList[0].age.age : this.num= this.charactersList[1].age.age;
   }
 }
