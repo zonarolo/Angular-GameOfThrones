@@ -1,6 +1,6 @@
 <div class="c-timeline--content">
-  <div class="c-timeline--content__buttom" (click)="order()"></div>
-  <div>&#x2191;</div>
+  <div class="c-timeline--content__buttom" (click)="order()" (click)="status=!status"></div>
+  <div [ngClass]="status ? 'c-timeline--content__arrow' : 'c-timeline--content__arrowDown'">&#x2191;</div>
   <div class="c-timeline--content__timeline">
  
     
@@ -11,6 +11,5 @@
         <h4>{{character.name}}</h4>
         <img [routerLink]="['/characters/' + character.name]" src="{{character.image}}" >
       </div>
-      <!-- </ng-container> -->
   </div>
 </div>

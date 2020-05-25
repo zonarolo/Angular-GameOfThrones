@@ -11,6 +11,7 @@ export class TimelineComponent implements OnInit {
   charactersList;
   charactersListPar;
   charactersListImpar;
+  status: boolean = true;
 
   age:number;
   name:string;
