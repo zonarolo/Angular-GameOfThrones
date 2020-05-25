@@ -1,59 +1,65 @@
 <header class="header">
-    <div class="header__link">
-        <div class="flecha" (click)="back()"><i class="fas fa-arrow-left fa-1x"></i><span class="flecha__name">Volver</span></div>
+  <div class="header__link">
+    <div class="flecha" (click)="back()">
+      <i class="fas fa-arrow-left fa-1x"></i
+      ><span class="flecha__name">Volver</span>
     </div>
+  </div>
 </header>
 <div class="character">
-<img class="character__img" src="{{ character.image }}" />
-<h1 class="character__name">{{character.name}}</h1>
+  <img class="character__img" src="{{ character.image }}" />
+  <h1 class="character__name">{{ character.name }}</h1>
 </div>
 <div class="characterDetails">
-
-<table class="characterDetails--table">
-<tr class="characterDetails--table__header">
-    <th translate>Four</th>
-    <th translate>Five</th>
-    <th translate>Six</th>
-    <th translate>Seven</th>
-    <th translate>Eight</th>
-    <th translate>Nine</th>
-</tr>
-<tr class="characterDetails--table__ll">
-    <td>
+  <table class="characterDetails--table">
+    <tr class="characterDetails--table__header">
+      <th translate>Four</th>
+      <th translate>Five</th>
+      <th translate>Six</th>
+      <th translate>Seven</th>
+      <th translate>Eight</th>
+      <th translate>Nine</th>
+    </tr>
+    <tr class="characterDetails--table__ll">
+      <td>
         <div class="container" [routerLink]="['/houses/', character.house]">
-        <img class="characterDetails--table__logoHouse" src="{{logoHouse}}" alt="">
-        {{character.house}}
+          <img
+            class="characterDetails--table__logoHouse"
+            src="{{ logoHouse }}"
+            alt=""
+          />
+          {{ character.house }}
         </div>
-    </td>
-    <td class="characterDetails--table__items">
+      </td>
+      <td class="characterDetails--table__items">
         <div class="ul-apariciones">
-            <ul *ngFor="let allegiance of character.allegiances">
-                <li>{{allegiance}}</li>
-            </ul>
+          <ul *ngFor="let allegiance of character.allegiances">
+            <li>{{ allegiance }}</li>
+          </ul>
         </div>
-    </td>
-<td class="characterDetails--table__items">
+      </td>
+      <td class="characterDetails--table__items">
         <div class="ul-apariciones">
-            <ul *ngFor="let appearances of character.appearances">
-                <li>{{appearances}}</li>
-            </ul>
+          <ul *ngFor="let appearances of character.appearances">
+            <li>{{ appearances }}</li>
+          </ul>
         </div>
-</td>
-    <td>{{character.father}}</td>
-    <td class="characterDetails--table__items">
+      </td>
+      <td>{{ character.father }}</td>
+      <td class="characterDetails--table__items">
         <div class="ul-apariciones">
-            <ul *ngFor="let sibling of character.siblings">
-                <li>{{sibling}}</li>
-            </ul>
+          <ul *ngFor="let sibling of character.siblings">
+            <li>{{ sibling }}</li>
+          </ul>
         </div>
-    </td>
-    <td class="characterDetails--table__items">
+      </td>
+      <td class="characterDetails--table__items">
         <div class="ul-apariciones">
-            <ul *ngFor="let title of character.titles">
-                <li>{{title}}</li>
-            </ul>
+          <ul *ngFor="let title of character.titles">
+            <li>{{ title }}</li>
+          </ul>
         </div>
-    </td>
-
-</tr>
-</table>
+      </td>
+    </tr>
+  </table>
+</div>

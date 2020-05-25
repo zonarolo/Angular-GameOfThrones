@@ -1,83 +1,80 @@
-*{
-    color: white;
-    list-style: none;
+* {
+  color: white;
+  list-style: none;
 }
 
-.header{
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 30px;
-
+.header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 30px;
 }
-.character{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: GameOfThrones;
-    
-    &__img{
-        height: 375px;
-    }
+.character {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: GameOfThrones;
 
-    &__name{
-        padding: 15px 0;
-    }
+  &__img {
+    height: 375px;
+  }
+
+  &__name {
+    padding: 15px 0;
+  }
 }
 
 .flecha {
-    font-size: 25px;
-    cursor: pointer;
-    &__name{
-        margin-left: 20px;
-        font-size: 16px;
-        font-family: 'GameOfThrones';
-    }
+  font-size: 25px;
+  cursor: pointer;
+  &__name {
+    margin-left: 20px;
+    font-size: 16px;
+    font-family: "GameOfThrones";
+  }
 }
 .ul-apariciones {
-    overflow-y: scroll;
-    height: 240px;
-    padding: 10px;
-    
+  overflow-y: scroll;
+  height: 240px;
+  padding: 10px;
 }
-.ul-apariciones::-webkit-scrollbar{
-    width: 7px;
-    background: #333333;
+.ul-apariciones::-webkit-scrollbar {
+  width: 7px;
+  background: #333333;
 }
 
 .ul-apariciones::-webkit-scrollbar-thumb {
-    background: white;
-	border-radius: 5px;
+  background: white;
+  border-radius: 5px;
 }
 
-.characterDetails{
-    text-align: center;
-    display: flex;
-    justify-content: center;
+.characterDetails {
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
-.characterDetails--table{
-    width: 90vw;
-    font-size: 18px ;
-    line-height: 3;
+.characterDetails--table {
+  width: 90vw;
+  font-size: 18px;
+  line-height: 3;
 
-    &__header{
-        font-family: GameOfThrones;
-        font-size: 20px;
-    }
-    &__ll{
-        width: 20px;
-    }
-    &__logoHouse{
-        height: 170px;
-        width: auto;
-        cursor: pointer;
-    }
+  &__header {
+    font-family: GameOfThrones;
+    font-size: 20px;
+  }
+  &__ll {
+    width: 20px;
+  }
+  &__logoHouse {
+    height: 170px;
+    width: auto;
+    cursor: pointer;
+  }
 }
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

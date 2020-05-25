@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CharactersListComponent } from './pages/characters/components/characters-list/characters-list.component';
 import { CharactersComponent } from './pages/characters/pages/characters/characters.component';
-import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { OrderListModule } from 'primeng/orderlist';
 import { CharactersDetailsComponent } from './pages/characters/pages/characters-details/characters-details.component';
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HousesListComponent } from './pages/houses/components/houses-list/houses-list.component';
 import { HousesComponent } from './pages/houses/pages/houses/houses/houses.component';
 import { HousesDetailsComponent } from './pages/houses/pages/houses-details/houses-details/houses-details.component';
@@ -31,7 +31,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     HousesListComponent,
     HousesComponent,
     HousesDetailsComponent,
-    TimelineComponent
+    TimelineComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,11 +44,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    })
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

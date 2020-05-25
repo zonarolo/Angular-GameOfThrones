@@ -1,18 +1,18 @@
 * {
   color: white;
-  font-family: 'GameOfThrones';
+  font-family: "GameOfThrones";
   box-sizing: border-box;
 }
 
-.c-timeline--content{
+.c-timeline--content {
   position: absolute;
   top: 10%;
   left: 5%;
   width: 90vw;
   overflow-y: scroll;
   height: 82vh;
-  
-  &__buttom{
+
+  &__buttom {
     border: 2px solid white;
     border-radius: 50%;
     position: relative;
@@ -22,21 +22,21 @@
     cursor: pointer;
     text-align: center;
   }
-  &__arrow{
+  &__arrow {
     font-size: 47px;
     transform: rotate(180deg);
     text-align: center;
   }
-  &__arrowDown{
+  &__arrowDown {
     font-size: 47px;
     text-align: center;
   }
-  &__timeline{
+  &__timeline {
     position: relative;
     margin: 0 auto;
   }
-  &__timeline:after{
-    content: '';
+  &__timeline:after {
+    content: "";
     position: absolute;
     width: 2px;
     background-color: white;
@@ -45,24 +45,24 @@
     left: 50%;
     margin-left: -0.08%;
   }
-  &__container{
+  &__container {
     position: relative;
     background-color: inherit;
     width: 30%;
     border-top: 2px solid #fff;
   }
-  &__left{
+  &__left {
     left: 19.95%;
   }
-  &__left:nth-child(even){
+  &__left:nth-child(even) {
     left: 49.95%;
   }
-  &__content{
+  &__content {
     position: relative;
     text-align: center;
     line-height: 2;
   }
-  &__content img{
+  &__content img {
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -70,31 +70,31 @@
     object-position: top;
     cursor: pointer;
   }
-  &__num{
+  &__num {
     position: relative;
     font-size: 25px;
     top: 10px;
   }
 }
-.firts:first-child{
+.firts:first-child {
   border: none;
 }
-.last:last-child{
+.last:last-child {
   border: none;
 }
-.c-timeline--content::-webkit-scrollbar{
+.c-timeline--content::-webkit-scrollbar {
   width: 7px;
-  background: #333333
+  background: #333333;
 }
 
 .c-timeline--content::-webkit-scrollbar-thumb {
-background: white;
-border-radius: 5px;
+  background: white;
+  border-radius: 5px;
 }
 
-.c-timeline--footer{
-  &__links{
-    position: fixed; 
+.c-timeline--footer {
+  &__links {
+    position: fixed;
     bottom: 17px;
     left: 0;
     right: 0;
@@ -106,8 +106,7 @@ border-radius: 5px;
     cursor: pointer;
     text-align: center;
   }
-  &__under{
+  &__under {
     text-decoration: underline;
   }
-
 }

@@ -24,7 +24,6 @@ export class HousesDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.gotService.getHouseName(this.name).subscribe( house => {
       this.house = (house[0]);
-      console.log (this.house)
     })
   }
 

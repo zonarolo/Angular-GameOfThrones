@@ -1,12 +1,14 @@
-<div class="c-got-home" [ngStyle]="{backgroundImage:'url(../../../assets/img/fondoGOT.svg)'}">
-
+<div
+  class="c-got-home"
+  [ngStyle]="{ backgroundImage: 'url(../../../assets/img/fondoGOT.svg)' }"
+>
   <p class="c-got-home__title" translate>Title</p>
 
   <div class="c-got-home__links">
-    <p  [routerLink]="['/characters']" translate>One</p>
-    
+    <p [routerLink]="['/characters']" translate>One</p>
+
     <p translate [routerLink]="['/houses']">Two</p>
-    
+
     <p translate [routerLink]="['/timeline']">Three</p>
   </div>
 </div>

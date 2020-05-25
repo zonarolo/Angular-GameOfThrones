@@ -20,6 +20,7 @@ export class GotService {
   getAllHouses(){
     return this.httpClient.get(environment.url + '/houses')
   }
+  
   getHouseName(name){
     return this.httpClient.get(environment.url + '/houses/' + name);
   }

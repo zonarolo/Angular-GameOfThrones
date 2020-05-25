@@ -4,19 +4,16 @@ import { GotService } from 'src/app/shared/services/got.service';
 @Component({
   selector: 'app-houses',
   templateUrl: './houses.component.html',
-  styleUrls: ['./houses.component.scss']
+  styleUrls: ['./houses.component.scss'],
 })
 export class HousesComponent implements OnInit {
+  housesList: Array<any>;
 
-  housesList : Array<any>;
-
-  constructor(private gotService:GotService) { }
+  constructor(private gotService: GotService) {}
 
   ngOnInit(): void {
-    this.gotService.getAllHouses().subscribe( (res:any) => {
-      console.log(res);
-      this.housesList = res.splice(4,200);
-    })
+    this.gotService.getAllHouses().subscribe((res: any) => {
+      this.housesList = res;
+    });
   }
-
 }
