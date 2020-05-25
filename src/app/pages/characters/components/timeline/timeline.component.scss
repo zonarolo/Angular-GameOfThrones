@@ -6,11 +6,12 @@
 
 .c-timeline--content{
   position: absolute;
-  top: 80px;
-  left: 83px;
+  top: 10%;
+  left: 5%;
   width: 90vw;
   overflow-y: scroll;
   height: 82vh;
+  
   &__buttom{
     border: 2px solid white;
     border-radius: 50%;
@@ -18,22 +19,17 @@
     width: 60px;
     height: 60px;
     left: 48%;
-    // background: black;
     cursor: pointer;
-    margin-bottom: 50px;
+    text-align: center;
   }
   &__arrow{
     font-size: 47px;
-    position: absolute;
-    right: 49.36%;
-    top: 8.2%;
     transform: rotate(180deg);
+    text-align: center;
   }
   &__arrowDown{
     font-size: 47px;
-    position: absolute;
-    right: 49.36%;
-    top: 7%;
+    text-align: center;
   }
   &__timeline{
     position: relative;
@@ -44,10 +40,10 @@
     position: absolute;
     width: 2px;
     background-color: white;
-    top: -50px;
+    top: -59px;
     bottom: 0;
     left: 50%;
-    margin-left: -3px;
+    margin-left: -0.08%;
   }
   &__container{
     position: relative;
@@ -73,6 +69,11 @@
     object-fit: cover;
     object-position: top;
     cursor: pointer;
+  }
+  &__num{
+    position: relative;
+    font-size: 25px;
+    top: 10px;
   }
 }
 
