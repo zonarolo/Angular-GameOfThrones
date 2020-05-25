@@ -1,13 +1,24 @@
 <div class="c-timeline--content">
+  <div class="c-timeline--content__buttom" (click)="changeOrder()"></div>
+  <div>&#x2191;</div>
   <div class="c-timeline--content__timeline">
  
+    
+    
     <div class="c-timeline--content__left c-timeline--content__container" *ngFor="let character of charactersList">
+<<<<<<< HEAD
       <ng-container *ngIf="character.age.age <= 100">
       <div class="c-timeline--content__content" >
         <h2>{{character.age.age}} </h2>
         <h4>{{character.name}}</h4>
         <img  *ngIf="character.name == 'Oberyn Martell'" class="c-character-list__img" src="../../../assets/img/Oberyn.jpg">
         <img *ngIf="character.name !== 'Oberyn Martell'" src="{{character.image}}" >
+=======
+      <div class="c-timeline--content__content" *ngIf="character.age.age < 100">
+        <h2>{{character.age.age}} </h2>
+        <h4>{{character.name}}</h4>
+        <img [routerLink]="['/characters/' + character.name]" src="{{character.image}}" >
+>>>>>>> b179435ef43ea156b660dde3cdc47fd44489f3cd
       </div>
       </ng-container>
   </div>
