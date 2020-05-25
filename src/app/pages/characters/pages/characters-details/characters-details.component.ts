@@ -52,11 +52,13 @@ export class CharactersDetailsComponent implements OnInit {
           }else if (this.character.house == 'Second Sons' || this.character.house == 'Second Sons (mercenary company)' ){
             this.logoHouse = "https://vignette.wikia.nocookie.net/gameofthrones/images/9/9e/Second-Sons-Shield.PNG/revision/latest?cb=20170606020329"
           }
-
-
-    })
-    
+        });
       });
-    })  }
+    });
+  }
+
+  back(){
+    window.history.go(-1);
+  }
 
 }

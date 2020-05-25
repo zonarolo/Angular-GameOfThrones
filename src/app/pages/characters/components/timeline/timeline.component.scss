@@ -11,7 +11,18 @@
   width: 90vw;
   overflow-y: scroll;
   height: 82vh;
-
+  &__buttom{
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    left: 48%;
+    background: black;
+    cursor: pointer;
+    margin-bottom: 50px;
+    object-position: top;
+  }
   &__timeline{
     position: relative;
     margin: 0 auto;
@@ -21,7 +32,7 @@
     position: absolute;
     width: 2px;
     background-color: white;
-    top: 0;
+    top: -50px;
     bottom: 0;
     left: 50%;
     margin-left: -3px;
@@ -37,9 +48,6 @@
     left: 19.95%;
   }
   &__left:nth-child(even){
-    left: 50%;
-  }
-  &__right {
     left: 49.95%;
   }
   &__content{
@@ -55,6 +63,7 @@
     height: 120px;
     object-fit: cover;
     object-position: top;
+    cursor: pointer;
   }
 }
 
