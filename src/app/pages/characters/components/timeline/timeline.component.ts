@@ -56,7 +56,6 @@ export class TimelineComponent implements OnInit {
   }
   order(){
     this.controller = !this.controller;
-    
     if (this.controller) {
       this.charactersList.sort((a, b) => {
         if (a.age.age > b.age.age) return 1;
