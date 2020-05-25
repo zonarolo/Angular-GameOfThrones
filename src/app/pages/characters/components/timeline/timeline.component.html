@@ -1,6 +1,6 @@
 <div class="c-timeline--content">
-  <div class="c-timeline--content__buttom" (click)="changeOrder()"></div>
-  <div class="c-timeline--content__arrow" >&#x2191;</div>
+  <div class="c-timeline--content__buttom" (click)="order()"></div>
+  <div>&#x2191;</div>
   <div class="c-timeline--content__timeline">
  
     
@@ -11,15 +11,6 @@
         <h4>{{character.name}}</h4>
         <img [routerLink]="['/characters/' + character.name]" src="{{character.image}}" >
       </div>
-
-  </div>
-</div>
-<div class="c-timelime--footer">
-  <div class="c-timeline--footer__links">
-    <p [routerLink]="['/characters']" translate>One</p>
-    
-    <p translate [routerLink]="['/houses']">Two</p>
-    
-    <p class="c-timeline--footer__under" translate [routerLink]="['/timeline']">Three</p>
+      <!-- </ng-container> -->
   </div>
 </div>

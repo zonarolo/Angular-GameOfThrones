@@ -15,6 +15,7 @@ export class TimelineComponent implements OnInit {
   age:number;
   name:string;
   image;
+  controller: boolean = true;
 
   @Input() characters: Array<any>;
 
@@ -50,10 +51,28 @@ export class TimelineComponent implements OnInit {
       });
 
       console.log(this.charactersList)
-      
-
       });
-
   }
+  order(){
+    this.controller = !this.controller;
 
+    if (this.controller) {
+      this.charactersList.sort((a, b) => {
+        if (a.age.age > b.age.age) return 1;
+        if (a.age.age < b.age.age) return -1;
+        return 0;
+      });
+      // for (let item of this.ageOrder) {
+      //   console.log(item.age);
+      // }
+    } else {
+    this.charactersList.sort((a, b) => {
+        if (a.age.age < b.age.age) return 1;
+        if (a.age.age > b.age.age) return -1;
+        return 0;
+      });
+      // for (let item of this.ageOrder) {
+      //   console.log(item.age);
+    }
+  }
 }
