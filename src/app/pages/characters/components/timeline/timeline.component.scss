@@ -18,10 +18,22 @@
     width: 60px;
     height: 60px;
     left: 48%;
-    background: black;
+    // background: black;
     cursor: pointer;
     margin-bottom: 50px;
-    object-position: top;
+  }
+  &__arrow{
+    font-size: 47px;
+    position: absolute;
+    right: 49.36%;
+    top: 8.2%;
+    transform: rotate(180deg);
+  }
+  &__arrowDown{
+    font-size: 47px;
+    position: absolute;
+    right: 49.36%;
+    top: 7%;
   }
   &__timeline{
     position: relative;
