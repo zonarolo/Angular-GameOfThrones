@@ -4,8 +4,9 @@
         font-size: 120px;
     }
     &__links{
-        display: grid;
-        grid-template-columns: auto auto auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
         font-size: 25px;
         cursor: pointer;
     }
@@ -20,4 +21,12 @@
     text-align: center;
     color: white;
     font-family: 'GameOfThrones';
+}
+
+@media (max-device-width : 1024px) {
+    .c-got-home{
+        &__links{
+            flex-direction: column;
+        }
+    }
 }
