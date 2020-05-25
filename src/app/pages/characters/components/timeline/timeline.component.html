@@ -1,6 +1,7 @@
 <div class="c-timeline--content">
-  <div class="c-timeline--content__buttom" (click)="order()" (click)="status=!status"></div>
-  <div [ngClass]="status ? 'c-timeline--content__arrow' : 'c-timeline--content__arrowDown'">&#x2191;</div>
+  
+  <div class="c-timeline--content__buttom" (click)="order()"><span class="c-timeline--content__num">{{num}}</span></div>
+  <div [ngClass]="controller ? 'c-timeline--content__arrow' : 'c-timeline--content__arrowDown'">&#x2191;</div>
   <div class="c-timeline--content__timeline">
  
     

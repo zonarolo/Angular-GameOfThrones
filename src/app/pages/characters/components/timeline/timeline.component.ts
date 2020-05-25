@@ -11,7 +11,7 @@ export class TimelineComponent implements OnInit {
   charactersList;
   charactersListPar;
   charactersListImpar;
-  status: boolean = true;
+  num: number = 16;
 
   age:number;
   name:string;
@@ -50,9 +50,9 @@ export class TimelineComponent implements OnInit {
         )
         this.charactersList = char
       });
-
-      console.log(this.charactersList)
-      });
+      
+      console.log(this.charactersList[143].age.age)
+    });
   }
   order(){
     this.controller = !this.controller;
@@ -63,16 +63,17 @@ export class TimelineComponent implements OnInit {
         return 0;
       });
       // for (let item of this.ageOrder) {
-      //   console.log(item.age);
-      // }
+        //   console.log(item.age);
+        // }
     } else {
-    this.charactersList.sort((a, b) => {
+      this.charactersList.sort((a, b) => {
         if (a.age.age < b.age.age) return 1;
         if (a.age.age > b.age.age) return -1;
         return 0;
       });
       // for (let item of this.ageOrder) {
-      //   console.log(item.age);
-    }
+        //   console.log(item.age);
+      }
+      this.controller ? this.num=this.charactersList[0].age.age : this.num= this.charactersList[1].age.age;
   }
 }
