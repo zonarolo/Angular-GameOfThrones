@@ -1,0 +1,61 @@
+* {
+  color: white;
+  list-style: none;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 30px;
+}
+
+.flecha {
+  font-size: 25px;
+  cursor: pointer;
+  &__name {
+    margin-left: 20px;
+    font-size: 16px;
+    font-family: "GameOfThrones";
+  }
+}
+
+.house {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 50px 0;
+  font-family: GameOfThrones;
+  font-size: 25px;
+
+  &__img {
+    height: 300px;
+    margin: 0 0 30px 0;
+  }
+}
+
+.houseDetails {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-family: GameOfThrones;
+}
+
+.houseDetails--table {
+  width: 90vw;
+  height: 30px;
+  line-height: 3;
+
+  &__header {
+    font-size: 25px;
+  }
+
+  &__items {
+    font-size: 15px;
+  }
+
+  &__items::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,56 @@
+<header class="header">
+  <div class="header__link">
+    <div (click)="back()" class="flecha">
+      <i class="fas fa-arrow-left fa-1x"></i
+      ><span class="flecha__name">Volver</span>
+    </div>
+  </div>
+</header>
+<div class="house">
+  <img
+    *ngIf="house.name == 'House Cassel'"
+    src="https://awoiaf.westeros.org/images/c/c3/House_Cassel.PNG"
+    class="house__img"
+  />
+  <img
+    *ngIf="house.name !== 'House Cassel'"
+    class="house__img"
+    src="{{ house.logoURL }}"
+    alt=""
+  />
+  <h1>{{ house.name }}</h1>
+</div>
+<div class="houseDetails">
+  <table class="houseDetails--table">
+    <tr class="houseDetails--table__header">
+      <th translate>Ten</th>
+      <th translate>Eleven</th>
+      <th translate>Twuelve</th>
+      <th translate>Thirteen</th>
+      <th translate>Fourteen</th>
+      <th translate>Fiveteen</th>
+    </tr>
+    <tr class="houseDetails--table__ll">
+      <td>{{ house.words }}</td>
+      <td class="houseDetails--table__items">
+        {{ house.seat }}
+      </td>
+      <td class="houseDetails--table__items">
+        {{ house.region }}
+      </td>
+      <td class="houseDetails--table__items">
+        <ul *ngFor="let allegiance of house.allegiance">
+          <li>{{ allegiance }}</li>
+        </ul>
+      </td>
+      <td class="houseDetails--table__items">
+        <ul *ngFor="let religion of house.religion">
+          <li>{{ religion }}</li>
+        </ul>
+      </td>
+      <td class="houseDetails--table__items">
+        {{ house.createdAt }}
+      </td>
+    </tr>
+  </table>
+</div>

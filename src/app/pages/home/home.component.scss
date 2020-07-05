@@ -1,36 +1,32 @@
-.c-got-home{
-    &__title{
-        padding: 12% 0;
-        font-size: 120px;
-    }
-    &__links{
-        display: grid;
-        grid-template-columns: auto auto auto;
-        font-size: 25px;
-        cursor: pointer;
-    }
-    &__flags {
-        position: absolute;
-        right: 80px;
-        top: 20px;
-    }
-    &__flags img{
-        height: auto;
-        width: 50px;
-        margin-right: 20px;
-        
-    }
+.c-got-home {
+  &__title {
+    padding: 17% 0;
+    font-size: 120px;
+  }
+  &__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 25px;
+    cursor: pointer;
+  }
 
+  min-height: 100vh;
+  min-width: 100vw;
+  background-image: url("../../../assets/img/fondoGOT.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 
-    min-height: 100vh;
-    min-width: 100vw;
-    background-image: url('../../../assets/img/fondoGOT.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-
-
-    text-align: center;
-    color: white;
-    font-family: 'GameOfThrones';
+  text-align: center;
+  color: white;
+  font-family: "GameOfThrones";
 }
 
+@media (max-device-width: 1024px) {
+  .c-got-home {
+    &__links {
+      flex-direction: column;
+    }
+  }
+}

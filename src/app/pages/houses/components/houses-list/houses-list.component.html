@@ -1,0 +1,28 @@
+<div class="c-houses-list">
+  <p-orderList
+    [value]="houses"
+    filter="filter"
+    filterBy="name"
+    filterPlaceholder=" 🔍 ..."
+  >
+    <ng-template let-house pTemplate="item">
+      <div
+        class="item c-houses-list__container"
+        *ngIf="house.logoURL && house.logoURL.length"
+        [routerLink]="['/houses/' + house.name]"
+      >
+        <img class="c-houses-list__img" src="{{ house.logoURL }}" />
+        <div class="c-houses-text">
+          <h3>{{ house.name }}</h3>
+        </div>
+      </div>
+    </ng-template>
+  </p-orderList>
+  <div class="c-houses-list__links">
+    <p class="pj" [routerLink]="['/characters']" translate>One</p>
+
+    <p class="hs" [routerLink]="['/houses']" translate>Two</p>
+
+    <p translate [routerLink]="['/timeline']">Three</p>
+  </div>
+</div>

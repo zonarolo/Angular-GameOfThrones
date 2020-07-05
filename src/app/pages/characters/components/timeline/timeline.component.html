@@ -1,0 +1,49 @@
+<div class="c-timeline--content">
+  <div class="c-timeline--content__buttom" (click)="order()">
+    <span class="c-timeline--content__num">{{ num }}</span>
+  </div>
+  <div
+    [ngClass]="
+      controller
+        ? 'c-timeline--content__arrow'
+        : 'c-timeline--content__arrowDown'
+    "
+  >
+    &#x2191;
+  </div>
+  <div class="c-timeline--content__timeline">
+    <ng-container *ngFor="let character of charactersList">
+      <div
+        class="c-timeline--content__left c-timeline--content__container"
+        [ngClass]="{ firts: controller == false, last: controller == true }"
+      >
+        <div
+          class="c-timeline--content__content"
+          *ngIf="character.age.age < 100"
+        >
+          <h2>{{ character.age.age }}</h2>
+          <h4>{{ character.name }}</h4>
+          <img
+            [routerLink]="['/characters/' + character.name]"
+            src="{{ character.image }}"
+          />
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="c-timeline--footer">
+    <div class="c-timeline--footer__links">
+      <p [routerLink]="['/characters']" translate>One</p>
+
+      <p translate [routerLink]="['/houses']">Two</p>
+
+      <p
+        class="c-timeline--footer__under"
+        translate
+        [routerLink]="['/timeline']"
+      >
+        Three
+      </p>
+    </div>
+  </div>
+</div>

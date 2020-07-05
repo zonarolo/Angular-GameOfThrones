@@ -1,1 +1,17 @@
+<div class="flags">
+  <i
+    [routerLink]="['/home']"
+    *ngIf="_router.url != '/home'"
+    class="fas fa-home fa-3x"
+  ></i>
+  <img
+    (click)="switchLanguage('es')"
+    src="../../../../../assets/img/spain.png"
+  />
+  <img
+    (click)="switchLanguage('en')"
+    src="../../../../../assets/img/united-kingdom.png"
+  />
+</div>
+
 <router-outlet></router-outlet>

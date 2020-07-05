@@ -1,0 +1,19 @@
+.flags {
+  position: absolute;
+  right: 80px;
+  top: 20px;
+}
+.flags img {
+  height: auto;
+  width: 50px;
+  margin-right: 20px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+i {
+  position: absolute;
+  color: #555555;
+  right: 160px;
+  cursor: pointer;
+}

@@ -4,19 +4,16 @@ import { GotService } from 'src/app/shared/services/got.service';
 @Component({
   selector: 'app-characters',
   templateUrl: './characters.component.html',
-  styleUrls: ['./characters.component.scss']
+  styleUrls: ['./characters.component.scss'],
 })
 export class CharactersComponent implements OnInit {
+  charactersList: Array<any>;
 
-  charactersList : Array<any>;
-
-  constructor(private gotService:GotService) { }
+  constructor(private gotService: GotService) {}
 
   ngOnInit(): void {
-    this.gotService.getAllCharacters().subscribe( (res:any) => {
-      console.log(res);
-      this.charactersList = res.splice(0,206);
-    })
+    this.gotService.getAllCharacters().subscribe((res: any) => {
+      this.charactersList = res;
+    });
   }
-
 }

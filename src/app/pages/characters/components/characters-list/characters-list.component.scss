@@ -1,23 +1,13 @@
-.c-character-list{
-  &__img{
+.c-character-list {
+  
+  font-family: "GameOfThrones";
+
+  &__img {
     width: 250px;
     height: 100%;
     cursor: pointer;
-    // border: solid 5px violet;
   }
-  &__flags {
-    position: absolute;
-    right: 80px;
-    top: 20px;
-    margin-top: -5px;
-  }
-  &__flags img{
-    height: auto;
-    width: 50px;
-    margin-right: 20px;
-    cursor: pointer;
-  }
-  &__links{
+  &__links {
     padding: 20px 0;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -28,30 +18,27 @@
   &__links .pj {
     text-decoration: underline;
   }
-  &__container{
-    // padding: 20px;
+  &__container {
     font-size: 10px;
-    // border: solid 3px orange;
     height: 40vh;
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-  &__text{
+  &__text {
     display: none;
     padding: 5px;
     width: 250px;
     height: 200px;
     text-justify: distribute-all-lines;
     margin-top: -35%;
-    background-color:rgba($color: #000000, $alpha: 0.7);
+    background-color: rgba($color: #000000, $alpha: 0.7);
   }
-  &__container:hover &__text{
+  &__container:hover &__text {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  
-  font-family: 'GameOfThrones';
+
 }

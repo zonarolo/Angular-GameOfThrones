@@ -1,25 +1,45 @@
 <div class="c-character-list">
-    <div class="c-character-list__flags">
-        <img src="../../../../../assets/img/white-home.png" [routerLink]="['/home']">
-        <img src="../../../../../assets/img/spain.png" >
-        <img src="../../../../../assets/img/united-kingdom.png"/>
-    </div>
-    <p-orderList [value]="characters" filter="filter" filterBy="name, house"  filterPlaceholder="Search" >
-        <ng-template let-char pTemplate="item">
-            <div class="item c-character-list__container" [routerLink]="['/characters/', char.name]">
-                <img class="c-character-list__img" src="{{ char.image }}" >
-                <div class="c-character-list__text">
-                <h1>{{char.name}}</h1>
-                <h3>{{char.house}}</h3>
-                </div>
-            </div>
-        </ng-template>
-    </p-orderList>
-    <div class="c-character-list__links">
-        <p class="pj" [routerLink]="['/characters']">PERSONAJES</p>
-        
-        <p>CASAS</p>
-        
-        <p>CRONOLOGIA</p>
-    </div>
+  <p-orderList
+    [value]="characters"
+    filter="filter"
+    filterBy="name, house"
+    filterPlaceholder=" 🔍 ..."
+  >
+    <ng-template let-char pTemplate="item">
+      <div
+        class="item c-character-list__container"
+        [routerLink]="['/characters/', char.name]"
+        *ngIf="char.image && char.image.length"
+        [routerLink]="['/characters/' + char.name]"
+        data-simplebar="c-character-list"
+      >
+        <img
+          *ngIf="char.name == 'Grenn'"
+          class="c-character-list__img"
+          src="https://static.wikia.nocookie.net/daef9c6c-cd8b-4015-b211-6e1e26d00fd3"
+        />
+        <img
+          *ngIf="char.name == 'Oberyn Martell'"
+          class="c-character-list__img"
+          src="../../../assets/img/Oberyn.jpg"
+        />
+        <img
+          *ngIf="char.name !== 'Oberyn Martell' && char.name !== 'Grenn'"
+          class="c-character-list__img"
+          src="{{ char.image }}"
+        />
+        <div class="c-character-list__text">
+          <h1>{{ char.name }}</h1>
+          <h3>{{ char.house }}</h3>
+        </div>
+      </div>
+    </ng-template>
+  </p-orderList>
+  <div class="c-character-list__links">
+    <p class="pj" [routerLink]="['/characters']" translate>One</p>
+
+    <p translate [routerLink]="['/houses']">Two</p>
+
+    <p translate [routerLink]="['/timeline']">Three</p>
+  </div>
 </div>

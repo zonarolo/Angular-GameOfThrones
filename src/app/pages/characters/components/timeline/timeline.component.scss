@@ -1,0 +1,112 @@
+* {
+  color: white;
+  font-family: "GameOfThrones";
+  box-sizing: border-box;
+}
+
+.c-timeline--content {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 90vw;
+  overflow-y: scroll;
+  height: 82vh;
+
+  &__buttom {
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    left: 48%;
+    cursor: pointer;
+    text-align: center;
+  }
+  &__arrow {
+    font-size: 47px;
+    transform: rotate(180deg);
+    text-align: center;
+  }
+  &__arrowDown {
+    font-size: 47px;
+    text-align: center;
+  }
+  &__timeline {
+    position: relative;
+    margin: 0 auto;
+  }
+  &__timeline:after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: white;
+    top: -59px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -0.08%;
+  }
+  &__container {
+    position: relative;
+    background-color: inherit;
+    width: 30%;
+    border-top: 2px solid #fff;
+  }
+  &__left {
+    left: 19.95%;
+  }
+  &__left:nth-child(even) {
+    left: 49.95%;
+  }
+  &__content {
+    position: relative;
+    text-align: center;
+    line-height: 2;
+  }
+  &__content img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: top;
+    cursor: pointer;
+  }
+  &__num {
+    position: relative;
+    font-size: 25px;
+    top: 10px;
+  }
+}
+.firts:first-child {
+  border: none;
+}
+.last:last-child {
+  border: none;
+}
+.c-timeline--content::-webkit-scrollbar {
+  width: 7px;
+  background: #333333;
+}
+
+.c-timeline--content::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 5px;
+}
+
+.c-timeline--footer {
+  &__links {
+    position: fixed;
+    bottom: 17px;
+    left: 0;
+    right: 0;
+    height: 75px;
+    padding-top: 37px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+  }
+  &__under {
+    text-decoration: underline;
+  }
+}
