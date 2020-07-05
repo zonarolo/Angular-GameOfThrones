@@ -1,4 +1,7 @@
 .c-character-list {
+  
+  font-family: "GameOfThrones";
+
   &__img {
     width: 250px;
     height: 100%;
@@ -38,5 +41,4 @@
     flex-direction: column;
   }
 
-  font-family: "GameOfThrones";
 }
